@@ -106,7 +106,7 @@ export function SocialMedia({ className, invert = false }) {
                      'transition',
                      invert
                         ? 'hover:text-neutral-200'
-                        : 'hover:text-neutral-700'
+                        : 'hover:text-neutral-950/70'
                   )}
                >
                   <socialMediaProfile.icon className="h-6 w-6 fill-current" />

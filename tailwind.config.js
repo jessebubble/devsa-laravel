@@ -1,5 +1,8 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
+import aspectRatio from '@tailwindcss/aspect-ratio';
+import containerQueries from '@tailwindcss/container-queries';
+import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -13,10 +16,20 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+            },
+            colors: {
+                spursTurq: '#00b2a9',
+                spursPink: '#ef426f',
+                spursOrange: '#ff8200',
             },
         },
     },
 
-    plugins: [forms],
+    plugins: [
+        forms,
+        aspectRatio,
+        containerQueries,
+        typography,
+    ],
 };

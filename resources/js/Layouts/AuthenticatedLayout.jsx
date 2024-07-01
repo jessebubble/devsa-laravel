@@ -2,15 +2,16 @@ import { useState } from 'react';
 import ApplicationLogo from '@/Components/ApplicationLogo';
 import Dropdown from '@/Components/Dropdown';
 import { Link } from '@inertiajs/react';
+import { Footer } from '@/Components/Footer';
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
 
     return (
-        <div className='z-50 overflow-hidden bg-neutral-950 pt-2'>
+        <div className='bg-neutral-950 pt-2'>
             <div 
                 style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-                className="bg-white pt-14"
+                className="bg-white py-14"
             >
                 <div className="mx-auto max-w-7xl flex items-center justify-between px-6 lg:px-8">
                     <Link href="/">
@@ -54,7 +55,7 @@ export default function Authenticated({ user, header, children }) {
                         <Dropdown>
                             <Dropdown.Trigger>
                                 <button
-                                    className="inline-flex items-center justify-center p-2 rounded-md text-neutral-950 hover:text-neutral-700 hover:bg-neutral-100 focus:outline-none focus:bg-neutral-100 focus:text-neutral-500 transition duration-150 ease-in-out"
+                                    className="inline-flex items-center justify-center p-2 text-neutral-950 hover:text-neutral-700 hover:bg-neutral-100 rounded-full focus:outline-none focus:bg-neutral-100 focus:text-neutral-500 transition duration-150 ease-in-out"
                                 >
                                     <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                         <path
@@ -76,17 +77,17 @@ export default function Authenticated({ user, header, children }) {
                             </Dropdown.Trigger>
 
                             <Dropdown.Content>
-                                <Dropdown.Link href={route('dashboard')} active={route().current('dashboard')}>
-                                    Dashboard
+                                <Dropdown.Link href='/mission' active={route().current('mission')}>
+                                    Our Mission
                                 </Dropdown.Link>
-                                <Dropdown.Link href={route('chirps.index')} active={route().current('chirps.index')}>
-                                    Chirps
+                                <Dropdown.Link href='/events' active={route().current('events')}>
+                                    Events Hub
+                                </Dropdown.Link>
+                                <Dropdown.Link href='/bounties' active={route().current('chirps.index')}>
+                                    Bounties
                                 </Dropdown.Link>
                                 <Dropdown.Link href={route('chirps.index')} active={route().current('chirps.index')}>
                                     Shop
-                                </Dropdown.Link>
-                                <Dropdown.Link href={route('chirps.index')} active={route().current('chirps.index')}>
-                                    Bounties
                                 </Dropdown.Link>
                                 <Dropdown.Link href='https://donate.stripe.com/00g3cq2yM2XsbGU144'>
                                     Tax-Deductible Donation
@@ -103,8 +104,9 @@ export default function Authenticated({ user, header, children }) {
                 </header>
             )}
 
-            <main className="w-full flex-auto bg-white">
+            <main className="flex min-h-full flex-col overflow-hidden">
                     {children}
+                    <Footer />
             </main>
         </div>
     );
