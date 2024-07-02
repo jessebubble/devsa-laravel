@@ -1,7 +1,6 @@
 import { Container } from '../Container';
 import { FadeIn } from '../FadeIn';
 import { MarqueeSection } from './CommunityMarquee';
-import { Link } from '@inertiajs/react';
 
 export function DiscordCommunity() {
    return (
@@ -10,14 +9,14 @@ export function DiscordCommunity() {
             <FadeIn>
                <h2 className="hdr font-display mx-auto mt-6 block max-w-5xl text-balance text-5xl font-medium tracking-tight text-neutral-950 sm:text-7xl lg:text-center">
                   Introducing Community Spaces on{' '}
-                  <Link
-                     to="https://discord.gg/cvHHzThrEw"
+                  <a
+                     href="https://discord.gg/cvHHzThrEw"
                      target="_blank"
                      rel="noopener noreferrer"
                   >
                      <strong className="gradient-text">Discord</strong>{' '}
                      <strong className="gradient-text arrow">→</strong>
-                  </Link>
+                  </a>
                </h2>
                <p className="mx-auto mt-6 max-w-2xl text-xl text-neutral-500 lg:text-center">
                   <strong>Find your community space</strong> and connect with

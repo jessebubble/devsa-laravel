@@ -5,7 +5,7 @@ import { PageIntro } from '@/Components/PageIntro';
 import { Button } from '@/Components/Button';
 import { CalendarSection } from '@/Components/CTA/Calendar';
 import { Sponsors } from '@/Components/CTA/Sponsors';
-import { Link, Head } from '@inertiajs/react';
+import { Head } from '@inertiajs/react';
 import SiteLayout from '@/Layouts/SiteLayout';
 
 
@@ -31,11 +31,11 @@ export default function Events({ auth }) {
                             single click!
                         </p>
                     </div>
-                    <Link href="https://lu.ma/devSA">
+                    <a href="https://lu.ma/devSA" target="_blank" rel="noopener noreferrer">
                         <Button className="mt-8" invert={false}>
                             Subscribe Now
                         </Button>
-                    </Link>
+                    </a>
                 </PageIntro>
 
                 <article>

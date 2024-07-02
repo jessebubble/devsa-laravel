@@ -4,7 +4,6 @@ import { SectionIntro } from '../SectionIntro';
 import { GrayscaleTransitionImage } from '../GrayscaleTransitionImage';
 import { Button } from '../Button';
 import { useRef } from 'react';
-import { Link } from '@inertiajs/react';
 
 export function ShopSection() {
    const scrollContainerRef = useRef(null);
@@ -26,13 +25,14 @@ export function ShopSection() {
                   100% of the proceeds go back to San Antonio's tech community
                </strong>
             </p>
-            <Button
-               className="mt-8"
-               invert={true}
-               href="https://devsanantonio.printify.me/products"
-            >
-               Shop Now
-            </Button>
+            <a href="https://devsanantonio.printify.me/products" target='_blank' rel='noopener noreferrer'>
+               <Button
+                  className="mt-8"
+                  invert={true}
+               >
+                  Shop Now
+               </Button>
+            </a>
          </SectionIntro>
          <Container className="mt-16">
             <FadeIn>
@@ -46,8 +46,8 @@ export function ShopSection() {
                         className="relative mx-6 flex-none sm:mx-0"
                      >
                         <div className="absolute inset-0 rounded-xl" />
-                        <Link
-                           to={mockup.href}
+                        <a
+                           href={mockup.href}
                            target="_blank"
                            rel="noopener noreferrer"
                         >
@@ -57,7 +57,7 @@ export function ShopSection() {
                               className={`slideZoom relative h-full w-full rounded-xl object-contain`}
                               onLoad={handleImageLoad}
                            />
-                        </Link>
+                        </a>
                      </div>
                   ))}
                </div>

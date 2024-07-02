@@ -16,7 +16,7 @@ export function Hero() {
    }, []);
 
    return (
-      <div className="overflow-hidden py-10 sm:py-24">
+      <div className="overflow-hidden py-10 sm:py-16">
          <Container className="">
             <FadeIn>
                <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
@@ -36,7 +36,7 @@ export function Hero() {
                               Our Mission
                            </Button>
                         </Link>
-                        <Link href="https://donate.stripe.com/00g3cq2yM2XsbGU144">
+                        <a href="https://donate.stripe.com/00g3cq2yM2XsbGU144" target='_blank' rel='noopener noreferrer'>
                            <Button
                               className="ml-4 mt-8"
                               invert={true}
@@ -44,7 +44,7 @@ export function Hero() {
                               Tax-Deductible Donation{' '}
                               <span className="arrow">→</span>
                            </Button>
-                        </Link>
+                        </a>
                      </div>
                   </div>
                   <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">

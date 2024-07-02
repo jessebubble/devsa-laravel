@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { Link } from '@inertiajs/react';
 
 function TwitterIcon(props) {
    return (
@@ -99,8 +98,10 @@ export function SocialMedia({ className, invert = false }) {
       >
          {socialMediaProfiles.map((socialMediaProfile) => (
             <li key={socialMediaProfile.title}>
-               <Link
+               <a
                   href={socialMediaProfile.href}
+                  target='_blank' 
+                  rel='noopener noreferrer'
                   aria-label={socialMediaProfile.title}
                   className={clsx(
                      'transition',
@@ -110,7 +111,7 @@ export function SocialMedia({ className, invert = false }) {
                   )}
                >
                   <socialMediaProfile.icon className="h-6 w-6 fill-current" />
-               </Link>
+               </a>
             </li>
          ))}
       </ul>

@@ -1,7 +1,6 @@
 import { Container } from '../Container';
 import { FadeIn } from '../FadeIn';
 import { SectionIntro } from '../SectionIntro';
-import { Link } from '@inertiajs/react';
 
 export function CalendarSection() {
    return (
@@ -11,14 +10,14 @@ export function CalendarSection() {
                With our events calendar, finding an event has never been easier.
                Don't miss out on these opportunities to connect and learn with
                the tech community!{' '}
-               <Link
+               <a
                   href="https://lu.ma/devSA"
                   target="_blank"
                   rel="noopener noreferrer"
                >
                   <strong className="">Subscribe</strong>{' '}
                   <strong className="arrow">→</strong>
-               </Link>
+               </a>
             </p>
          </SectionIntro>
          <Container className="mt-16">

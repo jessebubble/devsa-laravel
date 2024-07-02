@@ -1,7 +1,6 @@
 import { SectionIntro } from '../SectionIntro';
 import { Container } from '../Container';
 import { FadeIn, FadeInStagger } from '../FadeIn';
-import { Link } from '@inertiajs/react';
 
 const collaborativeChannels = [
    {
@@ -33,9 +32,9 @@ const collaborativeChannels = [
 export function ExpandingNetwork() {
    return (
       <>
+      <div className="mt-24 sm:mt-32 lg:mt-40">
          <SectionIntro
             title="Let's Collaborate and Elevate the Tech Space in SA!"
-            className="mt-24 sm:mt-32 lg:mt-40"
          >
             <p>
                Help us build a stronger tech community! Seeking partnerships to
@@ -49,8 +48,8 @@ export function ExpandingNetwork() {
                   <FadeIn key={channel.href} className="flex">
                      <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
                         <h3>
-                           <Link
-                              to={channel.href}
+                           <a
+                              href={channel.href}
                               target="_blank"
                               rel="noopener noreferrer"
                            >
@@ -60,7 +59,7 @@ export function ExpandingNetwork() {
                                  alt={channel.client}
                                  className="h-16 w-16"
                               />
-                           </Link>
+                           </a>
                         </h3>
                         <p className="font-display mt-6 text-2xl font-semibold text-neutral-950">
                            {channel.title}
@@ -73,6 +72,7 @@ export function ExpandingNetwork() {
                ))}
             </FadeInStagger>
          </Container>
+      </div>
       </>
    );
 }
