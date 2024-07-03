@@ -78,22 +78,40 @@ export default function Authenticated({ user, header, children }) {
 
                             <Dropdown.Content>
                                 <Dropdown.Link href='/mission' active={route().current('mission')}>
-                                    Our Mission
-                                </Dropdown.Link>
-                                <Dropdown.Link href='/events' active={route().current('events')}>
-                                    Events Hub
-                                </Dropdown.Link>
-                                <Dropdown.Link href='/bounties' active={route().current('chirps.index')}>
-                                    Bounties
-                                </Dropdown.Link>
-                                <Dropdown.Link href={route('chirps.index')} active={route().current('chirps.index')}>
-                                    Shop
-                                </Dropdown.Link>
-                                <Dropdown.Link href='https://donate.stripe.com/00g3cq2yM2XsbGU144'>
-                                    Tax-Deductible Donation
-                                </Dropdown.Link>
+                                        Our Mission
+                                    </Dropdown.Link>
+                                    <Dropdown.Link href='/events' active={route().current('events')}>
+                                        Events Hub
+                                    </Dropdown.Link>
+                                    <a 
+                                        href='https://devsanantonio.printify.me/products' 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className='block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out '
+                                    >
+                                        Shop <span className="arrow text-spursPink">→</span>
+                                    </a>
+                                    <a 
+                                        href='https://donate.stripe.com/00g3cq2yM2XsbGU144' 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className='block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out '
+                                    >
+                                        Donate <span className="arrow text-spursPink">→</span>
+                                    </a>
+                                    <Dropdown.Link href='/bounties' active={route().current('bounties')}>
+                                        Bounties
+                                    </Dropdown.Link>
                             </Dropdown.Content>
                         </Dropdown>
+                        <style>
+                            {`
+                                .arrow {
+                                    transform: rotate(-45deg);
+                                    display: inline-block;
+                                }
+                                `}
+                        </style>
                     </div>
                 </div>
             </div>
